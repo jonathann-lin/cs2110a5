@@ -14,10 +14,12 @@ public abstract class Mage extends Player {
     public boolean chooseAction(){
         System.out.println("Would you like to cast a " + SPELL_NAME + " (yes/no)? ");
         if (engine.getInputLine().equals("yes")) {
-            return true;
+            //Spell cast, do not attack
+            return false;
         }
         else{
-            return false; //TODO I think this is backwards
+            //NO spell cast, go to attack
+            return true;
         }
     }
 }
