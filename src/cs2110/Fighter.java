@@ -1,7 +1,16 @@
 package cs2110;
 
+/**
+ * A specific subtype of player that can equip a weapon that modifies the power and toughness of the
+ * Fighter while the weapon is equipped. The Fighter is given a chance to equip/change its weapon
+ * choice before each it attacks each turn.
+ */
 public class Fighter extends Player {
 
+    /**
+     * The current weapon that the Fighter has equipped. Can be null, indicating that no weapon is
+     * currently equipped.
+     */
     private Weapon currentWeapon;
 
 

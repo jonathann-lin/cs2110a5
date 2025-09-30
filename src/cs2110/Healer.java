@@ -1,5 +1,8 @@
 package cs2110;
 
+/**
+ * A subclass of Mage that can cast a healing spell that heals another player.
+ */
 public class Healer extends Mage {
 
     public Healer(String name, GameEngine engine) {

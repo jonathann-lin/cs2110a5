@@ -1,5 +1,10 @@
 package cs2110;
 
+
+/**
+ * A subclass of Mage that can cast  a fire spell at a monster of the user's
+ * choice that does increased damage at the cost of the mage taking recoil damage.
+ */
 public class FireMage extends Mage {
 
     public FireMage(String name, GameEngine engine) {

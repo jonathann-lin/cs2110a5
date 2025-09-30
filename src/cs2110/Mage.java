@@ -1,9 +1,12 @@
 package cs2110;
 
+
+/**
+ * A specific subtype of player that has the option of casting a spell unique to each mage subtype.
+ * Casting a spell replaces the mage's attack for that turn.
+ */
 public abstract class Mage extends Player {
-    /*
-        //TODO documentation
-     */
+
     /**
      * Name of spell that this mage can use
      */
@@ -16,11 +19,10 @@ public abstract class Mage extends Player {
 
 
     /**
-     *
-     * <p>
-     * Prompts the user to cast a spell. If the user inputs "no" (or anything other than "yes") no
-     * spell is cast and the mage proceeds to attack If the user inputs "yes" cast a spell based on
-     * the subclass of the mage, then skip attack phase
+     * Prompts the user to cast a spell. If the user inputs "no" (or anything other than "yes"), no
+     * spell is cast, and returns true (the mage proceeds to attack). If the user inputs "yes," cast
+     * a spell based on the subclass of the mage, then return false, indicating that no attack phase
+     * will follow.
      *
      */
     @Override
@@ -37,6 +39,8 @@ public abstract class Mage extends Player {
     }
 
 
-
+    /**
+     * A hook method that enables subclasses of Mage to implement unique spell behavior.
+     */
     protected abstract void castSpell();
 }
