@@ -12,12 +12,12 @@ public abstract class Mage extends Player {
 
     @Override
     public boolean chooseAction(){
-        System.out.println("Would you like to cast a " + SPELL_NAME + " (yes/no)?");
+        System.out.println("Would you like to cast a " + SPELL_NAME + " (yes/no)? ");
         if (engine.getInputLine().equals("yes")) {
             return true;
         }
         else{
-            return false;
+            return false; //TODO I think this is backwards
         }
     }
 }
