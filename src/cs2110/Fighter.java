@@ -32,7 +32,8 @@ public class Fighter extends Player {
      * reference is updated. Assumes that user will only input either yes or no. Inputs that are not
      * "no" are treated as responding "yes"
      * <p>
-     * Method always returns true once the weapon change has been processed.
+     * Method always returns true once the weapon change has been processed, because Fighters always
+     * have an attack phase.
      */
     @Override
     public boolean chooseAction() {

@@ -19,6 +19,8 @@ public abstract class Mage extends Player {
 
 
     /**
+     *
+     *
      * Prompts the user to cast a spell. If the user inputs "no" (or anything other than "yes"), no
      * spell is cast, and returns true (the mage proceeds to attack). If the user inputs "yes," cast
      * a spell based on the subclass of the mage, then return false, indicating that no attack phase
