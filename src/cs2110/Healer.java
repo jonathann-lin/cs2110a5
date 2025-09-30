@@ -2,10 +2,8 @@ package cs2110;
 
 public class Healer extends Mage {
 
-    private final String SPELL_NAME = "healing spell";
-
     public Healer(String name, GameEngine engine) {
-        super(name, engine);
+        super(name, engine, "healing spell");
     }
 
     /**

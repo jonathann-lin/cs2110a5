@@ -2,20 +2,21 @@ package cs2110;
 
 public abstract class Mage extends Player {
     /*
-
+        //TODO documentation
      */
     /**
      * Name of spell that this mage can use
      */
-    private String SPELL_NAME;
+    private final String SPELL_NAME;
 
-    public Mage(String name, GameEngine engine) {
+    public Mage(String name, GameEngine engine, String spellName) {
         super(name, engine);
+        this.SPELL_NAME = spellName;
     }
 
 
     /**
-     * //TODO documentation
+     *
      * <p>
      * Prompts the user to cast a spell. If the user inputs "no" (or anything other than "yes") no
      * spell is cast and the mage proceeds to attack If the user inputs "yes" cast a spell based on
@@ -24,7 +25,7 @@ public abstract class Mage extends Player {
      */
     @Override
     public boolean chooseAction() {
-        System.out.println("Would you like to cast a " + SPELL_NAME + " (yes/no)? ");
+        System.out.print("Would you like to cast a " + SPELL_NAME + " (yes/no)? ");
         if (engine.getInputLine().equals("yes")) {
             //Spell cast, do not attack
             castSpell();
@@ -34,6 +35,8 @@ public abstract class Mage extends Player {
             return true;
         }
     }
+
+
 
     protected abstract void castSpell();
 }

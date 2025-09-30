@@ -27,7 +27,7 @@ public class Fighter extends Player {
      */
     @Override
     public boolean chooseAction() {
-        System.out.println("Would you like to change your current weapon (yes/no)? ");
+        System.out.print("Would you like to change your current equipment (yes/no)? ");
         //if user does not want to change weapon, proceed to attack phase
         if (engine.getInputLine().equals("no")) {
             return true;
