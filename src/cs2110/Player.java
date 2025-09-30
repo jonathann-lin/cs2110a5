@@ -16,8 +16,8 @@ public abstract class Player extends Actor {
     private final int baseToughness;
 
     /**
-     * Constructs a new player with the given `name` and initializes their health, power, and
-     * toughness levels.
+     * Constructs a new player with the given `name` and `species` and initializes their health,
+     * power, and toughness levels.
      */
     public Player(String name, GameEngine engine) {
         super(name, engine);
@@ -54,6 +54,8 @@ public abstract class Player extends Actor {
         System.out.println(name() + " has been defeated.");
         engine.processPlayerDeath(this);
     }
+
+
 
     /**
      * Uses the console to query the user for which action they would like to take on their turn,
