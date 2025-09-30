@@ -12,19 +12,18 @@ public class Fighter extends Player {
 
 
     /**
-     Prompts the user to decide whether to change their currently equipped weapon.
-     *
+     * Prompts the user to decide whether to change their currently equipped weapon.
+     * <p>
      * If the user inputs "no", the method skips weapon selection and proceeds to the attack phase.
-     * If the user chooses to change their weapon by inputting "yes":
-     * - If the selection is null, the current weapon (if any) is unequipped and
-     *      and currentWeapon  is updated to null.
-     * - If the player already has a weapon equipped and chooses a different one, the current weapon is unequipped,
-     *      the new one is equipped, and currentWeapon is updated.
-     * - If the player does not have a weapon equipped and selects one, the chosen weapon is equipped
-     *      and the current weapon reference is updated.
-     *  Assumes that user will only input either yes or no. Inputs that are not "no" are treated as responding "yes"
-     *
-     *  Method always returns true once the weapon change has been processed.
+     * If the user chooses to change their weapon by inputting "yes": - If the selection is null,
+     * the current weapon (if any) is unequipped and and currentWeapon  is updated to null. - If the
+     * player already has a weapon equipped and chooses a different one, the current weapon is
+     * unequipped, the new one is equipped, and currentWeapon is updated. - If the player does not
+     * have a weapon equipped and selects one, the chosen weapon is equipped and the current weapon
+     * reference is updated. Assumes that user will only input either yes or no. Inputs that are not
+     * "no" are treated as responding "yes"
+     * <p>
+     * Method always returns true once the weapon change has been processed.
      */
     @Override
     public boolean chooseAction() {
@@ -40,7 +39,7 @@ public class Fighter extends Player {
         //if weapon choice == null, then unequip current weapon
         //if currentWeapon is already null, then do nothing when user tries to unequip
         if (chosenWeapon == null) {
-            if(currentWeapon!=null){
+            if (currentWeapon != null) {
                 currentWeapon.unequip();
                 currentWeapon = null;
             }
@@ -55,7 +54,7 @@ public class Fighter extends Player {
         }
 
         //user does not currently have a weapon and wants to equip a weapon
-        else{
+        else {
             chosenWeapon.equip();
             currentWeapon = chosenWeapon;
         }
@@ -69,8 +68,8 @@ public class Fighter extends Player {
      * returns power modified by the power value provided by a potential weapon
      */
     @Override
-    public int power(){
-        if (currentWeapon!=null){
+    public int power() {
+        if (currentWeapon != null) {
             return super.power() + currentWeapon.power();
         }
         return super.power();
@@ -80,8 +79,8 @@ public class Fighter extends Player {
      * returns toughness modified by the toughness value provided by a potential weapon
      */
     @Override
-    public int toughness(){
-        if (currentWeapon!=null){
+    public int toughness() {
+        if (currentWeapon != null) {
             return super.toughness() + currentWeapon.toughness();
         }
         return super.toughness();

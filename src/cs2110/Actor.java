@@ -26,8 +26,8 @@ public abstract class Actor {
     protected GameEngine engine;
 
     /**
-     * Constructs a new actor with the given `name` and `STARTING_HEALTH` value, associated with
-     * the engine that created it.
+     * Constructs a new actor with the given `name` and `STARTING_HEALTH` value, associated with the
+     * engine that created it.
      */
     public Actor(String name, GameEngine engine) {
         this.name = name;

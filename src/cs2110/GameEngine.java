@@ -125,8 +125,7 @@ public class GameEngine {
             return new Fighter(name, this);
         } else if (type == 1) {
             // Uncomment this line after you have implemented this class.
-            // return new FireMage(name, this);
-            return null;
+            return new FireMage(name, this);
         } else if (type == 2) {
             // Uncomment this line after you have implemented this class.
             // return new Healer(name, this);
@@ -414,7 +413,7 @@ public class GameEngine {
      * Returns the random result of a dice roll between `min` and `max` (inclusive).
      */
     public int diceRoll(int min, int max) {
-        return rng.nextInt(min, max+1);
+        return rng.nextInt(min, max + 1);
     }
 
     /**
