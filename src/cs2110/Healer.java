@@ -5,6 +5,6 @@ public class Healer extends Mage{
         super(name,engine);
     }
 
-    private String SPELL_NAME="healing spell";
+    private final String SPELL_NAME="healing spell";
 
 }

@@ -5,7 +5,7 @@ public class FireMage extends Mage{
         super(name, engine);
     }
 
-    private String SPELL_NAME="fire spell";
+    private final String SPELL_NAME="fire spell";
 
 
 

@@ -4,12 +4,20 @@ public abstract class Mage extends Player {
 /*
 
  */
+    /**
+     * Name of spell that this mage can use
+     */
     private String SPELL_NAME;
 
     public Mage(String name, GameEngine engine){
         super(name,engine);
     }
 
+
+    /**
+     *  //TODO documentation
+     *
+     */
     @Override
     public boolean chooseAction(){
         System.out.println("Would you like to cast a " + SPELL_NAME + " (yes/no)? ");
