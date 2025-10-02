@@ -95,4 +95,17 @@ public class Fighter extends Player {
         }
         return super.toughness();
     }
+
+    /**
+     * Overrides the processDeath() method to ensure that when a fighter dies, they drop their
+     * weapon and make it available for other fighters to equip.
+     */
+    @Override
+    protected void processDeath() {
+        if (currentWeapon != null) {
+            currentWeapon.unequip();
+            currentWeapon = null;
+        }
+        super.processDeath();
+    }
 }
